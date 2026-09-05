@@ -1,0 +1,566 @@
+/* =========================================================
+    BASE RESET AND TYPOGRAPHY (GIRLY FLOWERY COMIC EDITION)
+========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Quicksand:wght@500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #FFF0F5; /* Soft Lavender Blush */
+    color: #4A3B43;
+    font-family: 'Quicksand', sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Comic dot-screen pattern background overlay with floral aesthetic */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: radial-gradient(#FFB6C1 1.5px, transparent 1.5px);
+    background-size: 24px 24px;
+    opacity: 0.4;
+    z-index: -1;
+    pointer-events: none;
+}
+
+h1, h2, h3, .section-title {
+    font-family: 'Bangers', cursive;
+    letter-spacing: 2px;
+    color: #DDA0DD;
+    -webkit-text-stroke: 1.5px #4A3B43;
+}
+
+
+/* =========================================================
+    NAVIGATION BAR
+========================================================= */
+
+.navbar {
+    width: 100%;
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FFF;
+    border-bottom: 4px dashed #FF69B4;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar::before {
+    content: '🌸 LEAHN 🌸';
+    font-family: 'Bangers', cursive;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    background: #FFB6C1;
+    color: #4A3B43;
+    padding: 4px 12px;
+    border: 3px solid #4A3B43;
+    border-radius: 20px;
+    box-shadow: 3px 3px 0px #FF69B4;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #4A3B43;
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: color 0.2s ease;
+    background: #FFF0F5;
+    padding: 6px 14px;
+    border: 2px solid #4A3B43;
+    border-radius: 15px;
+    box-shadow: 2px 2px 0px #FF69B4;
+}
+
+.nav-links a:hover {
+    background: #FF69B4;
+    color: #FFF;
+}
+
+
+/* =========================================================
+    EXPORT PDF BUTTON
+========================================================= */
+
+.export-btn {
+    padding: 8px 16px;
+    background-color: #FFFACD;
+    color: #4A3B43;
+    border: 3px solid #4A3B43;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    box-shadow: 3px 3px 0px #FF69B4;
+    transition: all 0.1s ease;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.export-btn:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 5px 5px 0px #FF69B4;
+    background-color: #FFEE58;
+}
+
+.export-btn:active {
+    transform: translate(2px, 2px);
+    box-shadow: 1px 1px 0px #FF69B4;
+}
+
+
+/* =========================================================
+    HERO SECTION
+========================================================= */
+
+.hero {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 80px 20px;
+    position: relative;
+    background: linear-gradient(135deg, #FFF0F5 40%, #FFC0CB 100%);
+    border-bottom: 4px dashed #FF69B4;
+}
+
+.hero-content {
+    max-width: 900px;
+    position: relative;
+    z-index: 2;
+    background: rgba(255, 255, 255, 0.85);
+    padding: 50px;
+    border: 4px solid #4A3B43;
+    border-radius: 30px;
+    box-shadow: 8px 8px 0px #FF69B4;
+}
+
+.hero h1 {
+    font-size: clamp(3rem, 6vw, 5.5rem);
+    margin-bottom: 10px;
+    line-height: 1.1;
+    color: #FF1493;
+    -webkit-text-stroke: 2px #4A3B43;
+    text-shadow: 4px 4px 0px #FFF0F5;
+}
+
+.hero h2 {
+    font-size: clamp(1.2rem, 2.5vw, 2rem);
+    color: #4A3B43;
+    background: #FFFACD;
+    display: inline-block;
+    padding: 6px 18px;
+    border: 3px solid #4A3B43;
+    border-radius: 20px;
+    box-shadow: 3px 3px 0px #FF69B4;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
+    margin-bottom: 20px;
+    transform: rotate(-1deg);
+}
+
+.hero p {
+    max-width: 700px;
+    margin: 15px auto;
+    color: #4A3B43;
+    font-size: 1.15rem;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+    TECHNOLOGY STACK
+========================================================= */
+
+.tech-stack {
+    margin: 30px 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.tech-stack span {
+    background: #E6E6FA;
+    color: #4A3B43;
+    padding: 8px 18px;
+    border-radius: 20px;
+    border: 2px solid #4A3B43;
+    font-size: 0.9rem;
+    font-weight: 700;
+    box-shadow: 3px 3px 0px #FF69B4;
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.tech-stack span:hover {
+    background: #FFB6C1;
+    transform: translateY(-3px);
+}
+
+
+/* =========================================================
+    BUTTON
+========================================================= */
+
+.btn {
+    display: inline-block;
+    padding: 14px 32px;
+    background-color: #FF69B4;
+    color: #FFF;
+    text-decoration: none;
+    font-family: 'Bangers', cursive;
+    font-size: 1.3rem;
+    letter-spacing: 2px;
+    border: 3px solid #4A3B43;
+    border-radius: 25px;
+    margin-top: 25px;
+    box-shadow: 4px 4px 0px #4A3B43;
+    transition: all 0.15s ease;
+    -webkit-text-stroke: 0.5px #4A3B43;
+}
+
+.btn:hover {
+    background-color: #FF1493;
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0px #4A3B43;
+}
+
+.btn:active {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0px #4A3B43;
+}
+
+
+/* =========================================================
+    ABOUT & SKILLS SECTIONS
+========================================================= */
+
+.about-section, .skills-section {
+    padding: 90px 10%;
+    background-color: #FFF;
+    border-bottom: 4px dashed #FF69B4;
+}
+
+.about-content {
+    max-width: 900px;
+    margin: auto;
+}
+
+.about-text {
+    text-align: center;
+}
+
+.about-text p {
+    color: #4A3B43;
+    margin: 18px auto;
+    max-width: 700px;
+    font-size: 1.15rem;
+    font-weight: 500;
+}
+
+
+/* =========================================================
+    SMALL SECTION LABEL
+========================================================= */
+
+.small-title {
+    display: inline-block;
+    background-color: #FFF0F5;
+    color: #FF1493;
+    border: 2px solid #4A3B43;
+    padding: 5px 14px;
+    border-radius: 15px;
+    font-family: 'Bangers', cursive;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+    box-shadow: 2px 2px 0px #FF69B4;
+    transform: rotate(1deg);
+}
+
+
+/* =========================================================
+    PORTFOLIO SECTION
+========================================================= */
+
+.portfolio-section {
+    padding: 90px 10%;
+    background-color: #FFF5EE;
+    border-bottom: 4px dashed #FF69B4;
+}
+
+.section-title {
+    font-size: clamp(2.5rem, 4vw, 3.5rem);
+    display: inline-block;
+    margin-bottom: 45px;
+    position: relative;
+    color: #FF69B4;
+    -webkit-text-stroke: 1.5px #4A3B43;
+}
+
+.section-title::after {
+    content: '🌸';
+    position: absolute;
+    right: -35px;
+    top: 0;
+    font-size: 1.8rem;
+}
+
+
+/* =========================================================
+    PROJECT GRID & CARDS
+========================================================= */
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 35px;
+}
+
+.card, .skill-card {
+    background-color: #FFF;
+    padding: 35px 25px;
+    border: 3px solid #4A3B43;
+    border-radius: 25px; 
+    box-shadow: 6px 6px 0px #FFB6C1;
+    position: relative;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover, .skill-card:hover {
+    transform: translate(-4px, -4px);
+    box-shadow: 10px 10px 0px #FF69B4;
+}
+
+.card h4, .skill-card h4 {
+    font-family: 'Bangers', cursive;
+    color: #FF1493;
+    -webkit-text-stroke: 0.5px #4A3B43;
+    margin: 10px 0 12px 0;
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+}
+
+.card p, .skill-card p {
+    color: #4A3B43;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.skill-icon {
+    font-size: 2.2rem;
+    display: inline-block;
+    background: #FFFACD;
+    border: 2px solid #4A3B43;
+    padding: 8px 12px;
+    border-radius: 15px;
+    box-shadow: 2px 2px 0px #FF69B4;
+}
+
+
+/* =========================================================
+    CONTACT SECTION & FOOTER
+========================================================= */
+
+.contact-section {
+    padding: 100px 20px;
+    text-align: center;
+    background-color: #E6E6FA;
+    border-bottom: 4px dashed #FF69B4;
+}
+
+.contact-section h3 {
+    font-size: clamp(2.5rem, 5vw, 3.8rem);
+    color: #BA55D3;
+    -webkit-text-stroke: 1.5px #4A3B43;
+    margin-bottom: 15px;
+}
+
+.contact-section p {
+    color: #4A3B43;
+    max-width: 550px;
+    margin: auto auto 20px auto;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+footer {
+    padding: 40px;
+    text-align: center;
+    background-color: #FFF;
+    color: #4A3B43;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    border-top: 3px solid #4A3B43;
+}
+
+footer p {
+    font-weight: 700;
+}
+
+.social-links {
+    margin-top: 5px;
+    display: flex;
+    gap: 12px;
+}
+
+.social-links a {
+    color: #4A3B43;
+    background: #FFB6C1;
+    padding: 6px 16px;
+    text-decoration: none;
+    border: 2px solid #4A3B43;
+    border-radius: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    box-shadow: 2px 2px 0px #4A3B43;
+    transition: all 0.15s ease;
+}
+
+.social-links a:hover {
+    background: #FF69B4;
+    color: #FFF;
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+    INTERACTIVE ELEMENT
+========================================================= */
+
+.interactive-sprite {
+    position: absolute;
+    bottom: 25px;
+    right: 25px;
+    width: 65px;
+    height: 65px;
+    background: #FFB6C1;
+    border: 3px solid #4A3B43;
+    border-radius: 50%;
+    box-shadow: 4px 4px 0px #FF1493;
+    cursor: pointer;
+    animation: bounce 2s infinite ease-in-out;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+/* Project Preview Button */
+.preview-btn {
+    margin: 15px 0;
+    padding: 8px 16px;
+    background-color: #FFF0F5;
+    color: #FF1493;
+    border: 2px solid #4A3B43;
+    border-radius: 15px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
+    font-size: 0.9rem;
+    cursor: pointer;
+    box-shadow: 2px 2px 0px #FF69B4;
+    transition: all 0.1s ease;
+}
+
+.preview-btn:hover {
+    background-color: #FF69B4;
+    color: #FFF;
+    transform: translateY(-2px);
+    box-shadow: 3px 3px 0px #4A3B43;
+}
+
+/* Modal Popup Overlay */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(74, 59, 67, 0.7);
+    backdrop-filter: blur(4px);
+    justify-content: center;
+    align-items: center;
+}
+
+/* Modal Content Box */
+.modal-content {
+    background-color: #FFF;
+    padding: 20px;
+    border: 4px solid #4A3B43;
+    border-radius: 20px;
+    box-shadow: 8px 8px 0px #FF1493;
+    max-width: 90%;
+    max-height: 85vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content img {
+    max-width: 100%;
+    max-height: 75vh;
+    border: 2px solid #4A3B43;
+    border-radius: 10px;
+    object-fit: contain;
+}
+
+/* Close Button (X) */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 2rem;
+    font-family: 'Bangers', cursive;
+    color: #FF1493;
+    cursor: pointer;
+    background: #FFFACD;
+    border: 2px solid #4A3B43;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1;
+    box-shadow: 2px 2px 0px #4A3B43;
+    transition: transform 0.1s ease;
+}
+
+.close-btn:hover {
+    transform: scale(1.1);
+    background: #FF69B4;
+    color: #FFF;
+}
